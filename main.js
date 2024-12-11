@@ -33,3 +33,56 @@ interaction.addEventListener('animationend', jumpHandler)
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // bibberLink.classList.toggle...
+
+//1ste link//
+let frontend = document.querySelector('a:nth-of-type(1)')
+frontend.addEventListener('mouseover', hovered)
+frontend.addEventListener('mouseout', hoveredOut)
+
+function hovered() {
+  frontend.classList.add('mouseover')
+  console.log('het werkt')
+}
+
+function hoveredOut() {
+  frontend.classList.remove('mouseover')
+  console.log('gelukt')
+}
+
+// 2de link//
+let design = document.querySelector('a:nth-of-type(2)')
+design.addEventListener('click', geklikt)
+
+function geklikt() {
+  design.classList.add('click')
+  console.log('doet het')
+}
+
+
+//3de link//
+
+let and = document.querySelector('a:nth-of-type(3)')
+and.addEventListener('mouseover', hover)
+and.addEventListener('mouseout', hoverOut)
+
+function hover() {
+  and.classList.add('pulser')
+  console.log('yess')
+}
+
+function hoverOut() {
+  and.classList.remove('pulser')
+  console.log('gelukt')
+}
+
+
+//4de link//
+let development = document.querySelector('a:nth-of-type(4)')
+window.addEventListener('keydown', stretch )
+
+function stretch(event) {
+  if (event.keyCode === 80) {
+    console.log('stretch')
+    development.classList.toggle('stretch')
+  }
+}
